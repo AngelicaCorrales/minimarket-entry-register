@@ -77,9 +77,11 @@ public class Main {
 			System.out.println("La persona ha sido registrada exitosamente");
 		}catch(UnderAgeException uae) {
 			 System.err.println(uae.getMessage());
+			 uae.printStackTrace();
 
 		}catch(NoDayException nde) {
 			 System.err.println(nde.getMessage());
+			 nde.printStackTrace();
 			
 		}
 	}

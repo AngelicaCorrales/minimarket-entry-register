@@ -63,6 +63,10 @@ public class Minimarket {
 			throw new NoDayException(secondLastNumb, day);
 		}
 		
+		addPerson(type, numbId);
+	}
+	
+	public void addPerson(String type, String numbId) {
 		Person person=new Person(type, numbId);
 		peopleRegistered.add(person);
 	}
