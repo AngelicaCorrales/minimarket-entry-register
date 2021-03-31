@@ -36,6 +36,7 @@ public class Minimarket {
 	public void setAttemps(int attemps) {
 		this.attemps = attemps;
 	}
+		
 	
 	public void register(int typeId, String numbId) throws UnderAgeException, NoDayException{
 		attemps++;
@@ -59,7 +60,7 @@ public class Minimarket {
 		int day= LocalDate.now().getDayOfMonth(); 
 		
 		if((secondLastNumb%2==0 && day%2==0) || (secondLastNumb%2!=0 && day%2!=0)) {
-			throw new NoDayException();
+			throw new NoDayException(secondLastNumb, day);
 		}
 		
 		Person person=new Person(type, numbId);
