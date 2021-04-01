@@ -23,6 +23,7 @@ class MinimarketTest {
 		minimarket.addPerson("PP", "31962220");
 		minimarket.addPerson("CE", "1088457");
 		minimarket.addPerson("CC", "31974540");
+		minimarket.setAttemps(4);
 		
 	}
 	

@@ -74,15 +74,17 @@ public class Main {
 		
 		try {
 			minimarket.register(op, id);
-			System.out.println("La persona ha sido registrada exitosamente");
+			System.out.println("\n	La persona ha sido registrada exitosamente\n");
 		}catch(UnderAgeException uae) {
-			 System.err.println(uae.getMessage());
-			 uae.printStackTrace();
+			System.out.println("\n	No se permite el ingreso de menores de edad\n");
+			System.err.println(uae.getMessage());
+			uae.printStackTrace();
 
 		}catch(NoDayException nde) {
-			 System.err.println(nde.getMessage());
-			 nde.printStackTrace();
-			
+			System.out.println("\n	No se puede registrar. No le corresponde el día de acuerdo con el penúltimo número de su documento ("+nde.getSecondLastNumber()+") y el día del mes ("+nde.getActualDay()+")\n");
+			System.err.println(nde.getMessage());
+			nde.printStackTrace();
+
 		}
 	}
 	
