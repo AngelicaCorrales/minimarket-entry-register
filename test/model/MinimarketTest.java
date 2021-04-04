@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 import exceptions.NoDayException;
 import exceptions.UnderAgeException;
 
-class MinimarketTest {
+public class MinimarketTest {
 	private Minimarket minimarket;
 	
 	public void setupScenary1() {
